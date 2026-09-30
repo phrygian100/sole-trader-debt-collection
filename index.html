@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sole Trader Debt Collection | Help with unpaid invoices</title>
+    <meta
+      name="description"
+      content="Sole traders and small businesses often have customers and clients who carry a balance. That can become overwhelming. Get in touch. We quantify what is owed, bring the books up to date where needed, then remind people professionally and only step it up as far as it takes."
+    />
+    <meta property="og:title" content="Sole Trader Debt Collection" />
+    <meta
+      property="og:description"
+      content="Customers and clients who carry a balance can become overwhelming. Get in touch. We quantify what is owed, then remind them professionally — only as firmly as it takes."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,640&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#talk">Skip to the form</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top">Sole Trader Debt Collection</a>
+      <a class="header-link" href="#talk">Write to us</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="kicker">For sole traders and small businesses</p>
+          <h1>Many customers owe you. We'll keep on top of it.</h1>
+          <p class="lede">
+            Sole traders and small businesses often have customers and clients
+            who carry a balance. Keeping up with them can become overwhelming.
+            Get in touch. We quantify what is owed, and where the books have
+            fallen behind, we bring them up to date with you. Then we remind
+            people of what they owe — professionally, lightly at first, and
+            only more firmly if we must.
+          </p>
+          <a class="button" href="#talk">Tell us who owes you</a>
+        </div>
+        <aside class="note" aria-label="How the process works">
+          <p class="note-label">How it works</p>
+          <ul>
+            <li>You get in touch</li>
+            <li>We quantify every balance</li>
+            <li>Books up to date, if needed</li>
+            <li>Calm reminders, stepped up only where required</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="fit" aria-labelledby="fit-title">
+        <h2 id="fit-title">This is a service for when staying on top of debts owed is a full-time job.</h2>
+        <p>
+          One unpaid bill is manageable. A spread of customers and clients,
+          each carrying their own balance, is harder to hold in your head.
+          You may know the figures, or the paperwork may have slipped. Write
+          to us either way. We make the position clear, then approach each
+          account with only as much pressure as it needs.
+        </p>
+        <ul class="trades">
+          <li>Window cleaners</li>
+          <li>Carpet cleaners</li>
+          <li>Gardeners and cleaners</li>
+          <li>Trades and home services</li>
+          <li>Freelancers</li>
+          <li>Other small businesses</li>
+        </ul>
+      </section>
+
+      <section class="steps" aria-labelledby="steps-title">
+        <h2 id="steps-title">What happens next</h2>
+        <ol>
+          <li>
+            <h3>You get in touch</h3>
+            <p>Write to us about the customers and clients who still owe you. The list need not be perfect. We will come back to you. There is no number to call.</p>
+          </li>
+          <li>
+            <h3>We quantify every balance</h3>
+            <p>We establish what each account owes. Where the records are unclear, we work through the books with you until they are up to date.</p>
+          </li>
+          <li>
+            <h3>We remind them, carefully</h3>
+            <p>A light, professional reminder of the obligation to pay. If that is not enough, we raise the tone slowly — never more firmly than the debt requires.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="talk" id="talk" aria-labelledby="talk-title">
+        <div class="talk-intro">
+          <h2 id="talk-title">Tell us what's going on</h2>
+          <p>
+            Leave your name, a way to reach you, and a short note. You do not
+            need every figure. A sense of how many accounts are outstanding is
+            enough. We use this only to contact you about your enquiry.
+          </p>
+        </div>
+
+        <form id="enquiry" class="form" action="#" method="post" novalidate>
+          <div class="field honeypot" aria-hidden="true">
+            <label for="company-website">Company website</label>
+            <input
+              id="company-website"
+              type="text"
+              name="_honey"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+            <p class="error" id="name-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="contact">Phone or email</label>
+            <input
+              id="contact"
+              name="contact"
+              type="text"
+              autocomplete="tel"
+              inputmode="text"
+              required
+            />
+            <p class="error" id="contact-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="message">What's happened</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="7"
+              required
+              placeholder="For example: I run a small round. Several customers and clients still carry a balance, and I'm struggling to keep up with who owes what."
+            ></textarea>
+            <p class="error" id="message-error" hidden></p>
+          </div>
+
+          <button class="button" type="submit">Send</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="thanks" id="thanks" hidden>
+          <h3>We've got your note.</h3>
+          <p>We'll read it and contact you on the details you left.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-name">Sole Trader Debt Collection Services</p>
+      <p>
+        A sole trader service for small businesses owed money by their customers.
+        Talking to us is not a promise that the money will be recovered, and
+        nothing on this page is legal advice.
+      </p>
+    </footer>
+
+    <script src="site.js"></script>
+  </body>
+</html>
