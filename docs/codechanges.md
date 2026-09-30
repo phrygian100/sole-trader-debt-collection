@@ -11,3 +11,4 @@
 - Rewrote the opening and supporting copy so it addresses sole traders and small businesses whose customers and clients carry a balance, without leaning on a single trade as the example.
 - Set the section heading to: this is a service for when staying on top of debts owed is a full-time job.
 - Published the page on GitHub Pages and pointed soletraderdebtcollection.co.uk at it.
+- Connected the enquiry form so notes are emailed to travis_gm@live.co.uk. The first submission must be confirmed from that inbox.

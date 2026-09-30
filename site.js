@@ -4,7 +4,7 @@
  * test note. FormSubmit will email you a confirmation link. After you click
  * it, later notes arrive in this inbox.
  */
-const LEAD_EMAIL = "";
+const LEAD_EMAIL = "travis_gm@live.co.uk";
 
 const form = document.querySelector("#enquiry");
 const thanks = document.querySelector("#thanks");
