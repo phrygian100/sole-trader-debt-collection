@@ -10,3 +10,4 @@
 - Shifted the wording from a single unpaid customer to several customers with balances, and the overwhelm of keeping on top of them.
 - Rewrote the opening and supporting copy so it addresses sole traders and small businesses whose customers and clients carry a balance, without leaning on a single trade as the example.
 - Set the section heading to: this is a service for when staying on top of debts owed is a full-time job.
+- Published the page on GitHub Pages and pointed soletraderdebtcollection.co.uk at it.
