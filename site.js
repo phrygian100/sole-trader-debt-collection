@@ -1,10 +1,9 @@
 /**
- * Inbox that receives each enquiry.
- * Put your email address between the quotes, publish the page, then send one
- * test note. FormSubmit will email you a confirmation link. After you click
- * it, later notes arrive in this inbox.
+ * Posts each enquiry to the Cloudflare Worker, which emails
+ * travis_gm@live.co.uk. FormSubmit was returning a server error, so the
+ * page no longer posts there.
  */
-const LEAD_EMAIL = "travis_gm@live.co.uk";
+const ENQUIRY_URL = "https://enquiry.travis-gm.workers.dev/";
 
 const form = document.querySelector("#enquiry");
 const thanks = document.querySelector("#thanks");
@@ -85,39 +84,25 @@ form.addEventListener("submit", async (event) => {
     return;
   }
 
-  if (!LEAD_EMAIL) {
-    status.textContent =
-      "We can't receive notes just yet. Please try again a little later.";
-    return;
-  }
-
   const contact = fields.contact.input.value.trim();
   const payload = {
     name: fields.name.input.value.trim(),
     contact,
     message: fields.message.input.value.trim(),
-    _subject: "New enquiry — Sole Trader Debt Collection",
-    _template: "table",
-    _captcha: "true",
   };
-
-  if (contact.includes("@")) payload._replyto = contact;
 
   submitButton.disabled = true;
   submitButton.textContent = "Sending…";
 
   try {
-    const response = await fetch(
-      `https://formsubmit.co/ajax/${encodeURIComponent(LEAD_EMAIL)}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
-      }
-    );
+    const response = await fetch(ENQUIRY_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
 
     if (!response.ok) throw new Error("Request failed");
 
